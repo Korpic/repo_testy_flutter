@@ -1,47 +1,51 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(App());
+  runApp(MyApp());
 }
 
-class App extends StatelessWidget {
-  const App({Key key}) : super(key: key);
+class MyApp extends StatelessWidget {
+  const MyApp({Key key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: FirstPage(),
-    );
+      home: MyHomePage(),
+      debugShowCheckedModeBanner: false
     );
   }
 }
 
-class FirstPage extends StatefulWidget {
-  FirstPage({Key key}) : super(key: key);
+class MyHomePage extends StatefulWidget {
+  MyHomePage({Key key}) : super(key: key);
 
   @override
-  _FirstPageState createState() => _FirstPageState();
+  _MyHomePageState createState() => _MyHomePageState();
 }
 
-class _FirstPageState extends State<FirstPage> {
+class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
-   return Scaffold(
-     body: Column(
-       children: [
-         Container(
-           width: 150.0,
-           height: 100.0,
-           color: Colors.green,
-           margin: EdgeInsets.only(bottom:15.0),
-         ),
-         Container(
-             width: 150.0,
-           height: 100.0,
-           color: Color(0x1E90FF),
-         )
-       ],
-     )
-   );
+    Size size = MediaQuery.of(context).size;
+    return Scaffold(
+      body: SafeArea(
+        child: Container(
+          width: size.width,
+          height: size.height,
+        ) 
+        child Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            Container(
+              width: size.width * 0.5,
+              height: 50.0,
+              color: Colors.blueAccent,
+              child: Text("привет,")
+            )
+          ]
+        )
+      ),
+    );
   }
 }

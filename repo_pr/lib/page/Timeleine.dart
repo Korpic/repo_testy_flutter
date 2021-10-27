@@ -20,7 +20,16 @@ class _TimelinePageState extends State<TimelinePage> {
            physics: BouncingScrollPhysics(),
            scrollDirection: Axis.vertical,
            children:[
-             
+             Container(
+               color: Colors.redAccent,
+               height: size.height,
+               width: size.width,
+             ),
+             Container(
+               color: Colors.greenAccent,
+               height: size.height,
+               width: size.width,
+             )
            ],
          ),
        ),

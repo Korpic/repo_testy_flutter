@@ -24,11 +24,54 @@ class _TimelinePageState extends State<TimelinePage> {
                color: Colors.redAccent,
                height: size.height,
                width: size.width,
+               child: Center(
+                 child : Text (
+                   "Привет!",
+                   style: TextStyle(
+                     fontSize: 25.0,
+                     color: Colors.black87,
+                    fontWeight: FontWeight.w500
+                   ),
+                   ) 
+                 )
              ),
              Container(
                color: Colors.greenAccent,
                height: size.height,
                width: size.width,
+               child: Center(
+                 child : Text (
+                 "Мармеладка",
+                 style: TextStyle(
+                   fontSize: 25.0,
+                   color: Colors.lime,
+                   fontWeight: FontWeight.w500,
+                 ),
+                 
+                 ),
+                 
+                 ),
+                 
+             ),
+             Container(
+               color: Colors.blue[300],
+                height: size.height,
+               width: size.width,
+               child: Column(
+                 children:[Text(
+                   "ЧЕ СМОТРИШЬ?",
+                    style: TextStyle(
+                   fontSize: 30.0,
+                   color: Colors.redAccent,
+                   fontWeight: FontWeight.w500,
+                   ),Text(
+                   "ЧЕ СМОТРИШЬ?",
+                    style: TextStyle(
+                   fontSize: 30.0,
+                   color: Colors.redAccent,
+                   fontWeight: FontWeight.w500, ]
+                 ),
+
              )
            ],
          ),
